@@ -50,3 +50,10 @@ class Inventory:
         self.items = {}
         for category in self.catalogue:
             category_collection = self.catalogue[category]
+
+            if isinstance(category_collection, list):
+                for item in category_collection:
+                    new_item = item.copy()
+                    new_item["category"] = category
+                    new_item["subcategory"] = None
+                    self.items[new_item["id"]] = new_item
