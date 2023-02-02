@@ -70,4 +70,13 @@ class Order:
         if len(self.combos) > 0:
             string += "\n"
 
+        for category in self.items_by_category.values():
+            for i, item in enumerate(category):
+                name = item["name"] if "name" in item else item["size"]
+                price = item["price"]
+                subcategory = item["subcategory"]
+                if subcategory == None:
+                    subcategory = ""
+
+
 
