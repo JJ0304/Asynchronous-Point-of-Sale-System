@@ -98,5 +98,6 @@ class Inventory:
         if item_id not in self.stock:
             raise ValueError(f"No item with id: {item_id} exists in the inventory.")
 
-
+        if self.stock[item_id] == 0:
+            return False
     
