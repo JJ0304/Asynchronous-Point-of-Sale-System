@@ -84,5 +84,11 @@ class Inventory:
         await asyncio.sleep(2)
         return self.catalogue
 
+    @_verify_item_id
+    async def get_stock(self, item_id):
+        if item_id not in self.stock:
+            raise ValueError(f"No item with id: {item_id} exists in the inventory.")
+        await asyncio.sleep(2)
+
 
     
