@@ -105,5 +105,7 @@ class Inventory:
             self.stock[item_id] -= 1
             return True
 
-        
-    
+    @_verify_item_id
+    async def get_item(self, item_id):
+        await asyncio.sleep(1)
+        return self.items[item_id]
