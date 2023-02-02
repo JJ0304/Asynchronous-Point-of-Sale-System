@@ -75,3 +75,7 @@ class Inventory:
             return result
 
         return wrapper
+
+    async def get_number_of_items(self):
+        await asyncio.sleep(1)
+        return len(self.items)
