@@ -29,3 +29,9 @@ class Order:
     def find_combos(self):
         number_of_combos = None
 
+        for category_items in self.items_by_category.values():
+            if number_of_combos == None:
+                number_of_combos = len(category_items)
+            else:
+                number_of_combos = min(number_of_combos, len(category_items))
+
