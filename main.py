@@ -75,4 +75,11 @@ async def get_order(inventory, num_items):
     return order
 
 
+def display_order(order, sub_total, tax, total):
+    print("\nHere is a summary of your order: \n")
+    print(order)
+    print(f"\nSubtotal: ${round(sub_total, 2)}")
+    print(f"Tax: ${round(tax, 2)}")
+    print(f"Total: ${round(sub_total + tax, 2)}")
+
 
