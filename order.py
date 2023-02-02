@@ -21,3 +21,8 @@ class Order:
         # to get the stock and item the stock level may have decreased.
         if not success:
             return False, item_id
+
+        self.items_by_category[item["category"]].append(item)
+
+        return True, item_id
+
