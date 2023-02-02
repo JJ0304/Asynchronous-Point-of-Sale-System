@@ -65,3 +65,11 @@ class Inventory:
                         new_item["category"] = category
                         new_item["subcategory"] = subcategory
                         self.items[new_item["id"]] = new_item
+
+    def _verify_item_id(func):
+        async def wrapper(self, item_id):
+            if item_id not in self.stock:
+                raise ValueError(f"No item with id: {item_id} exists in the inventory.")
+            
+            result = await func(self, item_id)
+            return result
