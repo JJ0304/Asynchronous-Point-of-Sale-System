@@ -43,4 +43,10 @@ async def get_order(inventory, num_items):
     order = Order(inventory)
     tasks = []
 
+    print("Please enter the number of items that you would like to add to your order. Enter q to complete your order.")
+    while True:
+        item_id = input("Enter an item number: ")
+        if item_id == "q":
+            break
+
 
