@@ -39,3 +39,10 @@ class Order:
         self.items_by_category["Sides"].sort(key=lambda x: x["price"])
         self.items_by_category["Drinks"].sort(key=lambda x: x["price"])
 
+        for i in range(number_of_combos):
+            burger = self.items_by_category["Burgers"].pop()
+            side = self.items_by_category["Sides"].pop()
+            drink = self.items_by_category["Drinks"].pop()
+            combo = Combo(burger, side, drink)
+            self.combos.append(combo)
+
