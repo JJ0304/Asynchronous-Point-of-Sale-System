@@ -90,5 +90,8 @@ class Inventory:
             raise ValueError(f"No item with id: {item_id} exists in the inventory.")
         await asyncio.sleep(2)
 
+        async with self.stock_lock:
+            return self.stock[item_id]
+
 
     
