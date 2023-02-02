@@ -54,3 +54,8 @@ class Order:
             for item in category:
                 sub_total += item["price"]
 
+        for combo in self.combos:
+            sub_total += combo.price
+
+        return sub_total
+
