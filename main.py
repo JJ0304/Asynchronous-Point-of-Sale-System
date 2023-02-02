@@ -91,4 +91,16 @@ def purchase_order(total):
     else:
         print("No problem, please come again!")
 
+async def main():
+    print("Welcome to the ProgrammingExpert Burger Bar!")
+    inventory = Inventory()
+
+    num_items_task = asyncio.create_task(inventory.get_number_of_items())
+
+    print("Loading catalogue...")
+    catalogue = await inventory.get_catalogue()
+    display_catalogue(catalogue)
+
+    num_items = await num_items_task
+
 
