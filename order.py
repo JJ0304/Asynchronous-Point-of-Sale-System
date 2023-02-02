@@ -12,3 +12,6 @@ class Order:
         stock_level, item = await asyncio.gather(
             self.inventory.get_stock(item_id), self.inventory.get_item(item_id)
         )
+
+        if stock_level == 0:
+            return False, item_id
