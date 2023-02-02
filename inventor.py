@@ -45,3 +45,8 @@ class Inventory:
         self._generate_item_lookup_dict()
         self.stock = {i + 1: random.randint(0,15) for i in range(len(self.items))}
         self.stock_lock = asyncio.Lock()
+
+    def _generate_item_lookup_dict(self):
+        self.items = {}
+        for category in self.catalogue:
+            category_collection = self.catalogue[category]
