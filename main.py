@@ -58,4 +58,9 @@ async def get_order(inventory, num_items):
             print(f"Please enter a number below {num_items + 1}.")
             continue
 
+        add_to_order_task = asyncio.create_task(order.add_item(item_id))
+        tasks.append(add_to_order_task)
+
+    print("Placing order...")
+
 
