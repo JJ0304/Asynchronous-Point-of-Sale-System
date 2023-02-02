@@ -59,3 +59,6 @@ class Order:
 
         return sub_total
 
+    def __str__(self):
+        string = ""
+
