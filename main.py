@@ -63,4 +63,9 @@ async def get_order(inventory, num_items):
 
     print("Placing order...")
 
+    for task in tasks:
+        # if the task returns False we could not add the item
+        # to the order because the item is out of stock
+        in_stock, item_id = await task
+
 
