@@ -114,6 +114,15 @@ async def main():
             display_order(order, sub_total, tax, total)
             purchase_order(total)
 
+        order_again = input(
+            "Would you like to make another order (yes/no)? ").lower()
+        if order_again not in ["y", "yes"]:
+            break
+
+        print()
+
+    print("Goodbye!")
+
 
 
 
