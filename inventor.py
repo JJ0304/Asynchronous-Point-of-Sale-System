@@ -13,3 +13,9 @@ class Inventory:
                 {"id": 5, "name": "C++ Burger", "price": 7.99},
                 {"id": 6, "name": "Java Burger", "price": 7.99}
             ],
+            "Sides": {
+                "Fries": [
+                    {"id": 7, "size": "Small", "price": 2.49}, 
+                    {"id": 8, "size": "Medium", "price": 3.49}, 
+                    {"id": 9, "size": "Large", "price": 4.29}
+                ],
