@@ -10,3 +10,9 @@ class Combo:
     def _calculate_price(self):
         subtotal = self.burger["price"] + self.side["price"] + self.drink["price"] 
         return round(subtotal * (1 - Combo.DISCOUNT), 2)
+
+    def __str__(self):
+        string = f"${self.price} Burger Combo\n"
+        string += f"  {self.burger['name']}\n"
+        string += f"  {self.side['size']} {self.side['subcategory']}\n"
+        string += f"  {self.drink['size']} {self.drink['subcategory']}"
