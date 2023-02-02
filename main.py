@@ -103,4 +103,17 @@ async def main():
 
     num_items = await num_items_task
 
+    while True:
+        order = await get_order(inventory, num_items)
+
+        sub_total = order.get_price()
+        if sub_total != 0:
+            tax = sub_total * 0.05
+            total = sub_total + tax
+
+            display_order(order, sub_total, tax, total)
+            purchase_order(total)
+
+
+
 
