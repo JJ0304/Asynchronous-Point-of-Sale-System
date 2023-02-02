@@ -26,3 +26,6 @@ class Order:
 
         return True, item_id
 
+    def find_combos(self):
+        number_of_combos = None
+
