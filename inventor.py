@@ -73,3 +73,5 @@ class Inventory:
             
             result = await func(self, item_id)
             return result
+
+        return wrapper
