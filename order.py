@@ -62,3 +62,8 @@ class Order:
     def __str__(self):
         string = ""
 
+        for i, combo in enumerate(self.combos):
+            string += str(combo)
+            if i != len(self.combos) - 1:
+                string += "\n"
+
