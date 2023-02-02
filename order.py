@@ -15,3 +15,9 @@ class Order:
 
         if stock_level == 0:
             return False, item_id
+
+        success = await self.inventory.decrement_stock(item_id)
+        # This may not be successful because in the time we waited
+        # to get the stock and item the stock level may have decreased.
+        if not success:
+            return False, item_id
