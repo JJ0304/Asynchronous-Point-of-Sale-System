@@ -93,5 +93,10 @@ class Inventory:
         async with self.stock_lock:
             return self.stock[item_id]
 
+    @_verify_item_id
+    async def decrement_stock(self, item_id):
+        if item_id not in self.stock:
+            raise ValueError(f"No item with id: {item_id} exists in the inventory.")
+
 
     
