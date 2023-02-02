@@ -35,3 +35,7 @@ class Order:
             else:
                 number_of_combos = min(number_of_combos, len(category_items))
 
+        self.items_by_category["Burgers"].sort(key=lambda x: x["price"])
+        self.items_by_category["Sides"].sort(key=lambda x: x["price"])
+        self.items_by_category["Drinks"].sort(key=lambda x: x["price"])
+
