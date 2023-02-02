@@ -100,4 +100,10 @@ class Inventory:
 
         if self.stock[item_id] == 0:
             return False
+
+        async with self.stock_lock:
+            self.stock[item_id] -= 1
+            return True
+
+        
     
