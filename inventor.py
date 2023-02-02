@@ -57,3 +57,11 @@ class Inventory:
                     new_item["category"] = category
                     new_item["subcategory"] = None
                     self.items[new_item["id"]] = new_item
+
+            else:
+                for subcategory in category_collection:
+                    for item in category_collection[subcategory]:
+                        new_item = item.copy()
+                        new_item["category"] = category
+                        new_item["subcategory"] = subcategory
+                        self.items[new_item["id"]] = new_item
