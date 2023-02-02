@@ -68,4 +68,11 @@ async def get_order(inventory, num_items):
         # to the order because the item is out of stock
         in_stock, item_id = await task
 
+        if not in_stock:
+            print(
+                f"Unfortunately item number {item_id} is out of stock and has been removed from your order. Sorry!")
+
+    return order
+
+
 
