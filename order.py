@@ -67,3 +67,7 @@ class Order:
             if i != len(self.combos) - 1:
                 string += "\n"
 
+        if len(self.combos) > 0:
+            string += "\n"
+
+
