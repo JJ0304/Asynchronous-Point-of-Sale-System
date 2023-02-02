@@ -46,3 +46,11 @@ class Order:
             combo = Combo(burger, side, drink)
             self.combos.append(combo)
 
+    def get_price(self):
+        self.find_combos()
+        sub_total = 0
+
+        for category in self.items_by_category.values():
+            for item in category:
+                sub_total += item["price"]
+
