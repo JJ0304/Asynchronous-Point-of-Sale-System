@@ -49,4 +49,13 @@ async def get_order(inventory, num_items):
         if item_id == "q":
             break
 
+        if not item_id.isdigit():
+            print("Please enter a valid number.")
+            continue
+
+        item_id = int(item_id)
+        if item_id > num_items:
+            print(f"Please enter a number below {num_items + 1}.")
+            continue
+
 
