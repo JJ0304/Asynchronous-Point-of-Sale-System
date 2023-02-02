@@ -24,3 +24,21 @@ class Inventory:
                     {"id": 11, "size": "Large", "price": 4.49}
                 ]
             },
+            "Drinks": {
+                "Coke": [
+                    {"id": 12, "size": "Small", "price": 1.99}, 
+                    {"id": 13, "size": "Medium", "price": 2.49}, 
+                    {"id": 14, "size": "Large", "price": 2.99}
+                ],
+                "Ginger Ale": [
+                    {"id": 15, "size": "Small", "price": 1.99}, 
+                    {"id": 16, "size": "Medium", "price": 2.49}, 
+                    {"id": 17, "size": "Large", "price": 2.99}
+                ],
+                "Chocolate Milk Shake": [
+                    {"id": 18, "size": "Small", "price": 3.99}, 
+                    {"id": 19, "size": "Medium", "price": 4.49}, 
+                    {"id": 20, "size": "Large", "price": 4.99}
+                ]
+            }
+        }
