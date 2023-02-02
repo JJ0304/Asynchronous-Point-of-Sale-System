@@ -79,3 +79,10 @@ class Inventory:
     async def get_number_of_items(self):
         await asyncio.sleep(1)
         return len(self.items)
+
+    async def get_catalogue(self):
+        await asyncio.sleep(2)
+        return self.catalogue
+
+
+    
