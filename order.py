@@ -78,5 +78,9 @@ class Order:
                 if subcategory == None:
                     subcategory = ""
 
+                string += f"${price} {name} {subcategory}\n"
+
+        return string[:-1]  # remove the last \n
+
 
 
