@@ -16,3 +16,5 @@ class Combo:
         string += f"  {self.burger['name']}\n"
         string += f"  {self.side['size']} {self.side['subcategory']}\n"
         string += f"  {self.drink['size']} {self.drink['subcategory']}"
+
+        return string
