@@ -19,3 +19,8 @@ class Inventory:
                     {"id": 8, "size": "Medium", "price": 3.49}, 
                     {"id": 9, "size": "Large", "price": 4.29}
                 ],
+                "Caesar Salad": [
+                    {"id": 10, "size": "Small", "price": 3.49}, 
+                    {"id": 11, "size": "Large", "price": 4.49}
+                ]
+            },
